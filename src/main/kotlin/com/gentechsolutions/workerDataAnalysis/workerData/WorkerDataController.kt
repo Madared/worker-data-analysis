@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 
 
-@RestController
+@RestController("/worker-data")
 class WorkerDataController(
     private val associationService: OneToOneAssociationService,
     private val parsingService: FileParsingService
