@@ -2,8 +2,7 @@ package com.gentechsolutions.workerDataAnalysis.hoursDifference
 
 import com.gentechsolutions.workerDataAnalysis.hoursDifference.reporting.HoursDifferenceReportFilter
 import com.gentechsolutions.workerDataAnalysis.workerData.WorkerData
-import com.gentechsolutions.workerDataAnalysis.workerData.WorkerDataFilter
-import com.gentechsolutions.workerDataAnalysis.workerData.associating.oneToOne.OneToOneAssociator
+import com.gentechsolutions.workerDataAnalysis.workerData.filtering.WorkerDataFilter
 import com.gentechsolutions.workerDataAnalysis.workerData.comparing.WorkerDataComparerType
 
 data class HoursDifferenceRequest(

@@ -1,6 +1,7 @@
-package com.gentechsolutions.workerDataAnalysis.workerData
+package com.gentechsolutions.workerDataAnalysis.workerData.filtering
 
 import com.gentechsolutions.workerDataAnalysis.extensions.normalize
+import com.gentechsolutions.workerDataAnalysis.workerData.WorkerData
 import java.util.*
 import kotlin.jvm.optionals.getOrNull
 
