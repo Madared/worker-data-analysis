@@ -22,7 +22,8 @@ class HoursDifferenceController(private val associationService: OneToOneAssociat
             filteredExternal,
             hoursDifferenceRequest.comparers
         )
-        val report = ReportGeneratorExcel().generate(associated)
+        val reportingFiltered = hoursDifferenceRequest.reportingFilter?.filter(associated.associated) ?: associated.associated
+        val report = ReportGeneratorExcel().generate(associated.copy(associated = reportingFiltered))
         response.contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         val inputStream = ByteArrayInputStream(report.toByteArray())
         IOUtils.copy(inputStream, response.outputStream)
