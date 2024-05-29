@@ -1,4 +1,4 @@
-package com.gentechsolutions.workerdataanalysis
+package com.gentechsolutions.workerDataAnalysis
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

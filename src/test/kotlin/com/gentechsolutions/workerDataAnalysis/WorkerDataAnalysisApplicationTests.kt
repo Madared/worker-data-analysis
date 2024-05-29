@@ -1,4 +1,4 @@
-package com.gentechsolutions.workerdataanalysis
+package com.gentechsolutions.workerDataAnalysis
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
