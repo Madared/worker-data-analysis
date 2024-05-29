@@ -5,9 +5,7 @@ import com.gentechsolutions.workerDataAnalysis.hoursDifference.reporting.ReportG
 import com.gentechsolutions.workerDataAnalysis.workerData.parsing.files.ExcelFile
 import com.gentechsolutions.workerDataAnalysis.workerData.parsing.FileParsingService
 import com.gentechsolutions.workerDataAnalysis.titles.TitlesTemplateCreation
-import com.gentechsolutions.workerDataAnalysis.workerData.associating.oneToOne.OneToOneAssociationResults
 import com.gentechsolutions.workerDataAnalysis.workerData.associating.oneToOne.OneToOneAssociationService
-import com.gentechsolutions.workerDataAnalysis.workerData.associating.oneToOne.OneToOneAssociatorParallel
 import com.gentechsolutions.workerDataAnalysis.workerData.comparing.WorkerDataComparerType
 import jakarta.servlet.http.HttpServletResponse
 import org.apache.poi.util.IOUtils
