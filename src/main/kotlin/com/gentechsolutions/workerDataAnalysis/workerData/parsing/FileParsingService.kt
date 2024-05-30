@@ -15,13 +15,9 @@ class FileParsingService {
             if (titlesTemplate.isFailure) {
                 Result.failure(titlesTemplate.exceptionOrNull()!!)
             } else {
-                val parsed = try {
-                    val titlesParser = ExcelTitleTemplateParser(titlesTemplate.getOrThrow())
-                    val parser = ExcelFileParser(titlesParser)
-                    parser.parse(file.bytes.inputStream())
-                } catch (e: Throwable) {
-                    Result.failure(e)
-                }
+                val titlesParser = ExcelTitleTemplateParser(titlesTemplate.getOrThrow())
+                val parser = ExcelFileParser(titlesParser)
+                val parsed = parser.parse(file.bytes.inputStream())
                 parsed.map { toDataSetResults(it) }
             }
         }

@@ -9,6 +9,7 @@ import com.gentechsolutions.workerDataAnalysis.workerData.associating.oneToOne.O
 import com.gentechsolutions.workerDataAnalysis.workerData.comparing.WorkerDataComparerType
 import jakarta.servlet.http.HttpServletResponse
 import org.apache.poi.util.IOUtils
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.multipart.MultipartFile
 import java.io.ByteArrayInputStream
@@ -43,7 +44,9 @@ class ExcelToExcelController(
         val secondParsed = parsingService.parse(ExcelFile(second.bytes, baseTitles))
         if (firstParsed.isFailure || secondParsed.isFailure) {
             val exception = firstParsed.exceptionOrNull() ?: secondParsed.exceptionOrNull()!!
-            throw exception
+            println(exception.message)
+           response.status = 500
+            return
         }
         val comparers = listOf(
             WorkerDataComparerType.Id,
